@@ -3,7 +3,7 @@
 
 ### Author: AbdallahMosa
 
-### [PR1](https://github.com/AbdallahMosa/401-images-app/pull/1)
+### [PR1](https://github.com/AbdallahMosa/cookie-stand-admin/pull/1)
 
 First, run the development server:
 
