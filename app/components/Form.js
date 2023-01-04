@@ -1,16 +1,14 @@
 import { useState, useEffect } from "react";
-
+import ReportTable from "./ReportTable";
 const Form = () => {
   const [location, setLocation] = useState("");
   const [minCustomers, setMinCustomers] = useState("");
   const [maxCustomers, setMaxCustomers] = useState("");
   const [avgCookies, setAvgCookies] = useState("");
   const [formData, setFormData] = useState([]);
+  const [flag, setFlag] = useState(false);
 
-  // useEffect(() => {
-  //   setFormData({ location, minCustomers, maxCustomers, avgCookies });
-  // }, [location, minCustomers, maxCustomers, avgCookies]);
-
+  
   const handleChange = (event) => {
     const value = event.target.value;
     const name = event.target.name;
@@ -34,9 +32,11 @@ const Form = () => {
       avg: avgCookies,
     };
     setFormData([...formData, newD]);
+    setFlag(true);
   };
 
   return (
+    <div>
     <div className=" max-w-lg mx-auto ">
       <form onSubmit={handleSubmit}>
         <div className="flex flex-wrap -mx-3 mb-6">
@@ -118,7 +118,20 @@ const Form = () => {
         </div>
       </form>
 
-      {formData.length > 0 &&
+    </div>
+    {flag ? (
+        <ReportTable
+        formData = {formData}
+        ></ReportTable>
+      ) : (
+        <h1 className="flex flex-row items-center justify-center text-4xl font-bold mx-auto text-gray-800">No Cookie Stands Available</h1>
+      )}
+    </div>
+  );
+};
+export default Form;
+
+      {/* {formData.length > 0 &&
         formData.map((item) => {
           return (
             <div className="w-full mt-6 bg-gray-800 rounded-lg p-4">
@@ -128,8 +141,5 @@ const Form = () => {
               <h1> Average Cookies per Sale : {item.avg}</h1>
             </div>
           );
-        })}
-    </div>
-  );
-};
-export default Form;
+        })} */}
+     
