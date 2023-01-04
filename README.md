@@ -4,6 +4,7 @@
 ### Author: AbdallahMosa
 
 ### [PR1](https://github.com/AbdallahMosa/cookie-stand-admin/pull/1)
+### [PR2](https://github.com/AbdallahMosa/cookie-stand-admin/pull/2)
 
 First, run the development server:
 
