@@ -42,13 +42,13 @@ const Form = () => {
         <div className="flex flex-wrap -mx-3 mb-6">
           <div className="w-full px-3">
             <label
-              className="block uppercase tracking-wide text-gray-900 text-xl font-bold mb-2"
+              className="block uppercase tracking-wide text-gray-900 text-xl font-bold mb-2 dark:text-yellow-300"
               for="location"
             >
               Location
             </label>
             <input
-              className="appearance-none block w-full bg-gray-200 text-gray-900 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+              className="appearance-none block w-full bg-gray-100 text-gray-900 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white dark:text-yellow-300"
               id="location"
               type="text"
               name="location"
@@ -59,13 +59,13 @@ const Form = () => {
           </div>
           <div className="w-full px-3">
             <label
-              className="block uppercase tracking-wide text-gray-900 text-xl font-bold mb-2"
+              className="block uppercase tracking-wide text-gray-900 text-xl font-bold mb-2 dark:text-yellow-300"
               for="min-customers"
             >
               Minimum Customers per Hour
             </label>
             <input
-              className="appearance-none block w-full bg-gray-200 text-gray-900 border rounded py-3 "
+              className="appearance-none block w-full bg-gray-100 text-gray-900 border rounded py-3 dark:text-yellow-300 "
               placeholder="Enter the minimum number of customers per hour"
               name="min-customers"
               type="number"
@@ -75,13 +75,13 @@ const Form = () => {
           </div>
           <div className="w-full px-3">
             <label
-              className="block uppercase tracking-wide text-gray-900 text-xl font-bold mb-2"
+              className="block uppercase tracking-wide text-gray-900 text-xl font-bold mb-2 dark:text-yellow-300"
               for="max-customers"
             >
               Maximum Customers per Hour
             </label>
             <input
-              className="appearance-none block w-full bg-gray-200 text-gray-900 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+              className="appearance-none block w-full bg-gray-100 text-gray-900 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white dark:text-yellow-300"
               id="max-customers"
               name="max-customers"
               type="number"
@@ -92,13 +92,13 @@ const Form = () => {
           </div>
           <div className="w-full px-3">
             <label
-              className="block uppercase tracking-wide text-gray-900 text-xl font-bold mb-2"
+              className="block uppercase tracking-wide text-gray-900 text-xl font-bold mb-2 dark:text-yellow-300"
               for="avg-cookies"
             >
               Average Cookies per Sale
             </label>
             <input
-              className="appearance-none block w-full bg-gray-200 text-gray-900 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+              className="appearance-none block w-full bg-gray-100 text-gray-900 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white dark:text-yellow-300"
               id="avg-cookies"
               type="number"
               name="avg-cookies"
@@ -110,7 +110,7 @@ const Form = () => {
         </div>
         <div className="flex items-center justify-between">
           <button
-            className="bg-blue-500 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="bg-blue-500 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline dark:text-yellow-300"
             type="submit"
           >
             Submit
@@ -124,7 +124,7 @@ const Form = () => {
         formData = {formData}
         ></ReportTable>
       ) : (
-        <h1 className="flex flex-row items-center justify-center text-4xl font-bold mx-auto text-gray-800">No Cookie Stands Available</h1>
+        <h1 className="flex flex-row items-center justify-center text-4xl font-bold mx-auto text-gray-800 dark:text-yellow-300">No Cookie Stands Available</h1>
       )}
     </div>
   );

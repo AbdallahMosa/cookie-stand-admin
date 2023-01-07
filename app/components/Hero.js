@@ -32,10 +32,10 @@ const Hero = () => {
 
   }, []) 
   return (
-    <div className=" bg-gradient-to-r from-amber-800 to-amber-200 flex flex-row items-center justify-center h-screen">
+    <div className=" dark:bg-black   flex flex-row items-center justify-center h-screen">
       <div className="flex flex-col items-center justify-center">
-        <p className="text-4xl font-bold mb-8 text-gray-800">Welcome to our website!</p>
-        <p className="text-3xl mb-8 text-gray-800">You are visitor number {visitorCount}</p>
+        <p className="text-4xl font-bold mb-8 text-gray-800 dark:text-yellow-300">Welcome to our website!</p>
+        <p className="text-3xl mb-8 text-gray-800 dark:text-yellow-300">You are visitor number {visitorCount}</p>
 
       </div>
       <div className="p-1 m-1">

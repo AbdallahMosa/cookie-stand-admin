@@ -1,6 +1,9 @@
-import './globals.css'
-import Footer from './components/Footer'
-import Header from './components/Header'
+'use client';
+import "./globals.css";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import ThemeWrapper from "./contexts/theme";
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -9,13 +12,13 @@ export default function RootLayout({ children }) {
         head.jsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>
-      <Header></Header>
-      <main>
-        {children}
-      </main>
-      <Footer></Footer>
-      </body>
+      <ThemeWrapper>
+        <body>
+          <Header></Header>
+          <main>{children}</main>
+          <Footer></Footer>
+        </body>
+      </ThemeWrapper>
     </html>
-  )
+  );
 }
