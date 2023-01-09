@@ -1,8 +1,9 @@
-'use client';
+"use client";
 import "./globals.css";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import ThemeWrapper from "./contexts/theme";
+import { AuthWrapper } from "./contexts/auth";
 
 export default function RootLayout({ children }) {
   return (
@@ -12,13 +13,15 @@ export default function RootLayout({ children }) {
         head.jsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <ThemeWrapper>
-        <body>
-          <Header></Header>
-          <main>{children}</main>
-          <Footer></Footer>
-        </body>
-      </ThemeWrapper>
+      <AuthWrapper>
+        <ThemeWrapper>
+          <body>
+            <Header></Header>
+            <main>{children}</main>
+            <Footer></Footer>
+          </body>
+        </ThemeWrapper>
+      </AuthWrapper>
     </html>
   );
 }
